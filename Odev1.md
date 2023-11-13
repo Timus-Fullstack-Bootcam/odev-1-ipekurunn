@@ -313,15 +313,7 @@ Success 2
 Error 1
 Success 4
 ```
-job fonksiyonu bir Promise döndürüyor ve bu Promise reject durumunda. Dolayısıyla, promise chain içindeki catch bloğu çalışacak.
 
-İlk then bloğu (Success 1) çalışacak, çünkü işlem başarılı olduğu için bu blok çalışır.
-
-Ardından gelen ikinci then bloğu (Success 2) çalışacak. Ancak, burada Ödev3 ifadesi bir hata oluşturacak ve sonraki then bloğu atlanacak, doğrudan catch bloğuna geçilecek.
-
-catch bloğu (Error 1) çalışacak, çünkü önceki then bloğu bir hataya neden oldu.
-
-Son olarak, bir sonraki then bloğu (Success 4) çalışacak, çünkü önceki catch bloğu hatayı ele aldı ve zincirin geri kalanı hatasız devam eder.
 
 2- Bu kodun çıktısı nedir? Neden?
 ```javascript
