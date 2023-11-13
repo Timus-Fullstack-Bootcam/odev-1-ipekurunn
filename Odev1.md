@@ -308,12 +308,10 @@ promise
 
 Output:
 ```
-Success 1
-Success 2
 Error 1
 Success 4
 ```
-
+İlk olarak `job` fonksiyonu bir Promise döndürüyor ve bu Promise hemen reddediliyor (reject). Bu nedenle, önceki `.then` blokları atlanarak direkt `.catch` bloğu çalıştırılır. Ancak zincirin sonundaki `then` bloğu olan `Success 4` çalışır çünkü bu blok önceki promise zincirinde bir hata olup olmadığına bakmaksızın her durumda çalışır.
 
 2- Bu kodun çıktısı nedir? Neden?
 ```javascript
@@ -369,24 +367,5 @@ promise
 
 Output:
 ```
-success 
-Defeat
-error
-Success: test
+
 ```
-
-job(true) ile başlayarak, promise başarıyla çözülecek ve ilk then bloğu çalışacaktır. Bu durumda "success" consola yazdırılacaktır.
-
-İlk then bloğu içinde, ikinci job(true) promise'i başarıyla çözülecektir, ancak içindeki if ifadesi "victory" değilse, bir hata fırlatılacaktır. Bu durumda "Defeat" consola yazdırılacaktır.
-
-İkinci catch bloğu, önceki then bloğundan gelen hatayı ele alacak ve "error" consola yazdırılacaktır.
-
-Sonraki catch bloğu içindeki job(false) promise'i reddedilecektir, bu nedenle "error" consola yazdırılacaktır.
-
-Önceki adımda bir hata oluştuğu için, zincirdeki sonraki then bloğu atlanacak ve doğrudan sonraki catch bloğu çalışacaktır. Bu durumda "Ödev4" consola yazdırılacaktır.
-
-Sonraki then bloğu içindeki job(true) promise'i başarıyla çözülecektir ve "success" consola yazdırılacaktır.
-
-Sonraki then bloğu içindeki new Error('test') ifadesi bir hata yaratacaktır, bu nedenle sonraki catch bloğu çalışacak ve "Error caught" consola yazdırılacaktır.
-
-Sonraki then bloğu içindeki console.log('Success:', data.message); ifadesi data nesnesinde bir message özelliği olmadığından undefined olarak consola yazdırılacaktır.
