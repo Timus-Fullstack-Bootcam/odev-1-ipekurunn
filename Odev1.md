@@ -258,7 +258,7 @@ console.log("Pant var mı?: ", isTherePant);
 
 #### **5- dolap arrayindeki elemanların karakter sayısını toplayıp geriye döndürecekfonksiyonu yazın.**
 
-#### **6- dolap arrayindki tüm elemanları büyük harfe çevirip yeni bir değişkene 3 farklı yöntemle atayın.**
+#### **6- dolap arrayindeki tüm elemanları büyük harfe çevirip yeni bir değişkene 3 farklı yöntemle atayın.**
 
 #### **7- dolap arrayini index sayıları key olacak şekilde objeye çeviriniz.**
 
@@ -272,10 +272,55 @@ console.log("Pant var mı?: ", isTherePant);
 ## Array Soruları 2
 `const arr = [1,2,3,4,5,6,7,7,8,6,10];`
 #### **1. arrayindeki yinelenen sayıları bulun.**
+```javascript
+const arr = [1,2,3,4,5,6,7,7,8,6,10];
+function getDuplicates(data) {
+    return data.filter((value, index) => data.indexOf(value) !== index);
+}
+
+console.log(getDuplicates(arr));
+```
 
 #### **2. arrayindeki tüm yinelenen sayıları silip yeni bir arrayi 2 farklı method ile oluşturun.**
+```javascript
+//Method 1 - filter ile:
+const arr = [1,2,3,4,5,6,7,7,8,6,10];
+function removeDuplicates(data) {
+    return data.filter((value, index) => data.indexOf(value) === index);
+}
+
+console.log(removeDuplicates(arr));
+
+//Method 2 - set ile:
+const arr = [1,2,3,4,5,6,7,7,8,6,10];
+function removeDuplicates(data) {
+    return [...new Set(data)]
+}
+
+console.log(removeDuplicates(arr));
+
+```
 
 #### **3. arrayindeki en yüksek ve en düşük değeri 2 farklı methodla bulun.**
+```javascript
+//Method 1- Reduce ile:
+const arr = [1,2,3,4,5,6,7,7,8,6,10];
+
+const{max, min} = arr.reduce(
+    (acc, curr) => ({
+        max: Math.ax(acc.max, curr),
+        min: Math.min(acc.min, curr),
+    }),
+    {max: -Infinity, min: Infinity}
+);
+
+console.log("En yüksek değer:", max);
+console.log("En düşük değer:", min);
+
+//Method 2- Math.min, Math.max ile:
+
+
+```
 
 ## Kodlama Soruları
 1- Bu kodun çıktısı nedir? Neden?
