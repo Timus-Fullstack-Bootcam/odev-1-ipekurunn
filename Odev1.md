@@ -348,7 +348,7 @@ promise
         return job(false);
     })
     .then(function(data) {
-        console.log('Ödev4:', data);
+        console.log(data);
         return job(true);
     })
     .catch(function(error) {
