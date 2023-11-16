@@ -238,24 +238,28 @@ Ek olarak, Callback Hell durumundaki karmaşıklığı azaltarak kodun daha okun
 `var dolap = ["Shirt", "Pant", "Tshirt"];`
 #### **1- dolap arrayindeki son elemanı silip consola yazdırın.**
 ```javascript
+var dolap = ["Shirt", "Pant", "Tshirt"];
 var deletedElement = dolap.pop();
 
 console.log("Deleted Element: ", deletedElement);
 ```
 #### **2- dolap arrayindeki ilk elamanı silip yerine “Hat” elemanını gönderip consola yazdırın.**
 ```javascript
+var dolap = ["Shirt", "Pant", "Tshirt"];
 dolap.splice(0, 1, "Hat");
 
 console.log("Current Dolap: ", dolap);
 ```
 #### **3- dolap değişkeninin array olup olmadığını kontrol edin ve sonucu bir değişkeneeşitleyin**
 ```javascript
+var dolap = ["Shirt", "Pant", "Tshirt"];
 var isDolapArray = Array.isArray(dolap);
 
 console.log("Is Dolap Array?: ", isDolapArray);
 ```
 #### **4- dolap arrayinde “Pant” elemanın olup olmadığını 3 farklı method ile kontrol edin**
 ```javascript
+var dolap = ["Shirt", "Pant", "Tshirt"];
 // includes() kullanarak:
 var isTherePant = dolap.includes("Pant");
 
@@ -272,11 +276,46 @@ var indexOfPant = dolap.indexOf("Pant");
 console.log("Pant var mı?: ", isTherePant);
 ```
 
-#### **5- dolap arrayindeki elemanların karakter sayısını toplayıp geriye döndürecekfonksiyonu yazın.**
+#### **5- dolap arrayindeki elemanların karakter sayısını toplayıp geriye döndürecek fonksiyonu yazın.**
+```javascript
+var dolap = ["Shirt", "Pant", "Tshirt"];
+var totalNumberOfCharacter = dolap.reduce((total, character) => total + character.length, 0);
+
+console.log("Total Number of Character:", totalNumberOfCharacter);
+```
 
 #### **6- dolap arrayindeki tüm elemanları büyük harfe çevirip yeni bir değişkene 3 farklı yöntemle atayın.**
+```javascript
+var dolap = ["Shirt", "Pant", "Tshirt"];
+// map() kullanarak:
+var upperCaseDolap = dolap.map(element => element.toUpperCase());
+console.log("Dolap Arrayinin Büyük Harf Versiyonu:" upperCaseDolap);
+
+// for loop kullanarak:
+var upperCaseDolap2 = [];
+for (let i = 0; i < dolap.length; i++) {
+    upperCaseDolap2.push(dolap[i].toUpperCase());
+}
+console.log("Dolap Arrayinin Büyük Harf Versiyonu:" upperCaseDolap2);
+
+// forEach loop kullanarak:
+var upperCaseDolap3 = [];
+dolap.forEach(element => {
+    upperCaseDolap3.push(element.toUpperCase());
+});
+console.log("Dolap Arrayinin Büyük Harf Versiyonu:" upperCaseDolap3);
+```
 
 #### **7- dolap arrayini index sayıları key olacak şekilde objeye çeviriniz.**
+```javascript
+var dolap = ["Shirt", "Pant", "Tshirt"];
+
+var dolapObject = {};
+dolap.forEach((element, index) => {
+    dolapObject[index] = element;
+});
+console.log("Dolap Object:", dolapObject);
+```
 
 #### **8- slice ile splice farkı nedir?**
 `slice()` metodu bir dizinin belirli bir bölümünü seçerek kopyalar ve bu kopyayı yeni bir dizi olarak döndürür.
