@@ -1,5 +1,5 @@
 ## Ödev - Hafta 1-2
-### 1.
+### 1.JavaScript nedir ve tarihsel gelişiminden bahsedin.
 Brendan Eich, JavaScript'in ilk versiyonunu `Mocha` adıyla sadece 10 günde oluşturmuştur. Daha sonra iyi bir versiyon olan `LiveScript` piyasaya sürüldü ve kısa bir süre sonra da `JavaScript` olarak adlandırıldı.
 
 ECMAScript ise 1996 yılında JavaScript'i standartlaştırmak amacıyla ECMA International'a sunuldu. Yıllar içerisinde gelişerek günümüzde ECMAScript 12 ile JavaScript'e geniş eklemeler ve düzenlemeler koleksiyonu sağlıyor.
