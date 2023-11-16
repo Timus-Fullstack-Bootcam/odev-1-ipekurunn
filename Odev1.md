@@ -1,4 +1,20 @@
 ## Ödev - Hafta 1-2
+### 1.
+Brendan Eich, JavaScript'in ilk versiyonunu `Mocha` adıyla sadece 10 günde oluşturmuştur. Daha sonra iyi bir versiyon olan `LiveScript` piyasaya sürüldü ve kısa bir süre sonra da `JavaScript` olarak adlandırıldı.
+
+ECMAScript ise 1996 yılında JavaScript'i standartlaştırmak amacıyla ECMA International'a sunuldu. Yıllar içerisinde gelişerek günümüzde ECMAScript 12 ile JavaScript'e geniş eklemeler ve düzenlemeler koleksiyonu sağlıyor.
+
+JavaScript çerçeveleri de yıllar boyunca evrim geçirdi.
+
+`DHTML`: 1997 yılında Internet Explorer 4.0 ile piyasaya sürüldü.
+
+`jQuery`: 2006 yılında çıktı ve çeiştli tarayıcılar arasındaki uyumluluğu artırdı.
+
+`ReactJs`: 2013 yılında sadece görünüm katmanından sorumlu bir kütüphane olarak ortaya çıktı.
+
+`AngularJS`: 2009 yılında Google tarafından geliştirilerek tek sayfalık uygulamalar için bir mimari sağladı.
+
+`Node.js`: JavaScript'i tarayıcı dışında çalıştırmak için 2009 yılında piyasaya sürüldü.
 ### **2. Java ile JavaScript arasındaki fark nedir?**
 Java ve JavaScript, farklı kullanım alanları ve özelliklere sahip iki farklı programlama dilidir. Java genellikle büyük uygulamalar için tercih edilirken, JavaScript web geliştirme ve tarayıcı tabanlı uygulamalar için kullanılır.
 
