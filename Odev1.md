@@ -467,5 +467,19 @@ promise
 
 Output:
 ```
-
+success
+Defeat
+error
+Error caught
+Success: test
 ```
+Öncelikle Promise state olarak bir parametre alıyor ve eğer true ise resolve ile `success`, false ise reject ile `error` dönecek.
+İlk olarak job true ile bir promise başlatıyor ve bu promise resolve durumuna geçtiği için `success` değeri ile tanımlanıyor.
+
+Daha sonra ilk .then bloğu, ilk promise başarılı bir şekilde çalıştığı için `success` değerini konsola yazdırır.Ve bir sonraki job(true) promisi döner.
+
+İkince .then bloğunda ise, ikinci promise de başarılı olduğu için çalışarak `data` değerinin `victory` olup olmadığına bakar. eşit olmadığı için `Defeat` hatasını fırlatır. Burada hata fırlattığı için return'e gelmeden catch bloğuna atlar çünkü bir hata yakaladık. Böylece `Defeat` değeri ekrana yazdırılır. Daha sonra job(false) döner, yani reject olur. Reject olduğu için konsola `error` yazdırılır. Burada reject durumu olduğu için tekrar bir sonraki .catch bloğuna atlar. Ve `Error caught` değeri ekrana yazdırılır. 
+
+Bir sonraki .then bloğu ile data parametresine `test` değeri atanır. Ve bir sonraki .then bloğunda `Success: test ` değeri ekrana yazılır.
+
+Herhangi bir reject durumu olmadığı için sondaki .catch bloğuna girmez.
